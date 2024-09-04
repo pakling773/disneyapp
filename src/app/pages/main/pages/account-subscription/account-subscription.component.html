@@ -1,0 +1,99 @@
+<section class="account-subscription-section">
+  <div class="container">
+    <div class="d-flex g-8">
+      <img
+        class="cursor-pointer"
+        routerLink="/home"
+        src="./assets/icons/left-arrow.svg"
+        alt=""
+      />
+      <span class="body-small primary-100">返回</span>
+    </div>
+
+    <p class="sub-heading mb-40">訂閱計劃</p>
+
+    <!-- Subscription form wrapper -->
+    <div
+      class="subscription-from-wrapper d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="subscription-card">
+        <img
+          class="subscription-logo"
+          src="./assets/images/subscription-logo.png"
+          alt=""
+        />
+        <div
+          class="d-flex subscription-content align-items-center justify-content-between"
+        >
+          <div class="subscription-details">
+            <h6 class="mb-8 mb-8 body">Disney+</h6>
+
+            <h6 class="mb-16 fw-normal body">Disney+(高級 月費方)</h6>
+
+            <p class="neutral-900 m-0 caption">
+              請透過您的香港寬頻帳戶管理 Disney+ 訂 <br />
+              閱。
+            </p>
+          </div>
+          <p class="primary-100 m-0 body">切換至年度計劃</p>
+        </div>
+      </div>
+
+      <!-- Account subscription form -->
+
+      <form class="subscription-form">
+        <div class="form-group position-relative">
+          <input
+            type="email"
+            class="form-control neutral-200"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="付款方式"
+          />
+          <div class="input-right-item">
+            <div class="d-flex align-items-center">
+              <img
+                class="visa-logo"
+                src="./assets/images/visa-logo.png"
+                alt=""
+              />
+              <span class="body fw-normal">**0455</span>
+            </div>
+            <span class="body fw-normal primary-100">更改</span>
+          </div>
+        </div>
+
+        <div class="form-group position-relative">
+          <label class="date-lable" for="">下一個帳單日期</label>
+          <input
+            type="date"
+            step="2"
+            class="form-control dateTime picker neutral-200"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="next account date"
+          />
+        </div>
+
+        <div class="form-group position-relative">
+          <label class="date-lable" for="">最後一次付款</label>
+
+          <input
+            type="date"
+            step="2"
+            class="form-control dateTime picker neutral-200"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="next account date"
+          />
+        </div>
+      </form>
+
+      <button routerLink="/home" class="primary-button large-btn">儲存</button>
+
+      <div class="cancel-btn">
+        <a class="btn-text text-decoration-none" href="">取消訂閱</a>
+      </div>
+    </div>
+  </div>
+</section>

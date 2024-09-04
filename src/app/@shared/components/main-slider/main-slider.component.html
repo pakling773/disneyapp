@@ -1,0 +1,52 @@
+<section class="hero-section position-relative">
+  <!--   Caurosel  -->
+  <div class="hero-swiper position-relative">
+    <swiper-container
+      class="hero-swiper-container"
+      init="false"
+      appSwiper
+      #swiperContainer
+      [config]="swiperParams"
+      *ngIf="movieHeroCaurosel.length"
+    >
+      <swiper-slide
+        *ngFor="let herocaurosel of movieHeroCaurosel; let i = index"
+      >
+        <div class="swiper-hero-content-wrapper w-100 position-relative">
+          <div class="hero-section-overlay"></div>
+
+          <div class="hero-overlay"></div>
+
+          <img class="hero-thumbnail w-100" [src]="herocaurosel?.img" alt="" />
+
+          <div class="container">
+            <div class="swiper-hero-content z-index-2">
+              <img class="luca-disney-logo" [src]="herocaurosel?.logo" alt="" />
+
+              <p class="description mb-32 netural-100">
+                {{ herocaurosel.description }}
+              </p>
+
+              <div class="button-wrapper d-flex g-24 flex-wrap">
+                <button class="primary-button" routerLink="/movie/1">
+                  <img src="./assets/icons/video-player.svg" alt="" />立即播放
+                </button>
+
+                <button routerLink="/movie-detail" class="secondary-button">
+                  <img src="./assets/icons/check.svg" alt="" /> 預告
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+
+    <!-- <div class="swiper-pagination hero-swiper-pagination"></div> -->
+
+    <div class="hero-swiper-btns container">
+      <button class="swiper-button-prev hero-swiper-btn-prev"></button>
+      <button class="swiper-button-next hero-swiper-btn-next"></button>
+    </div>
+  </div>
+</section>

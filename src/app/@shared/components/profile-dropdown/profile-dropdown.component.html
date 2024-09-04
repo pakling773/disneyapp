@@ -1,0 +1,53 @@
+<div class="user-menu-wrapper">
+  <div class="user-menu position-relative">
+    <div class="user-detail-wrapper">
+      <div class="user-detail d-flex align-items-center">
+        <img
+          class="user-thumbnail"
+          src="./assets/images/user-avatar.png"
+          alt=""
+        />
+        <span>Buzzy</span>
+      </div>
+
+      <div class="user-detail d-flex align-items-center">
+        <img
+          class="user-thumbnail"
+          src="./assets/images/women-avatar.png"
+          alt=""
+        />
+        <span>Cliff</span>
+      </div>
+
+      <div class="user-detail d-flex align-items-center">
+        <img
+          class="user-thumbnail"
+          src="./assets/images/dog-avatar.png"
+          alt=""
+        />
+        <span>Violet & Jacky</span>
+      </div>
+    </div>
+
+    <div class="user-info d-flex flex-column">
+      <a (click)="navigate('/edit-users-profile')" class="body-line m-0">
+        編輯使用者資料
+      </a>
+      <a class="body-line m-0">設定</a>
+      <a (click)="navigate('/account-subscription')" class="body-line m-0"
+        >訂閱計劃</a
+      >
+      <a class="body-line m-0">帳戶</a>
+      <a class="body-line m-0">使用說明</a>
+
+      <button
+        type="button"
+        class="body-line sign-out-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        登出
+      </button>
+    </div>
+  </div>
+</div>

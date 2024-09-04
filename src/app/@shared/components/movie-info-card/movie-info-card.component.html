@@ -1,0 +1,67 @@
+<div class="movie-card-model" #movieCardModel>
+  <div class="cover-img-wrapper position-relative">
+    <img class="cover-img" [src]="movie.img" alt="" />
+    <div class="cover-overlay cursor-pointer" routerLink="/movie-detail"></div>
+    <img
+      class="model-text-thumbnail"
+      src="./assets/images/card-model-text.png"
+      alt=""
+    />
+  </div>
+
+  <div class="card-info-wrapper">
+    <div class="tooltip-wrapper">
+      <button
+        type="button"
+        class="btn primary-btn"
+        bTooltip
+        placement="top"
+        appTooltip="立即播放"
+        routerLink="/movie/1"
+      >
+        <img src="./assets/icons/video-player.svg" alt="" />
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        bTooltip
+        placement="top"
+        appTooltip="多人觀享"
+      >
+        <img src="./assets/icons/group.svg" alt="" />
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        bTooltip
+        placement="top"
+        appTooltip="添加到我的片單"
+      >
+        <img src="./assets/icons/add-white-icon.svg" alt="" />
+      </button>
+      <button
+        routerLink="movie-detail"
+        type="button"
+        class="btn btn-secondary"
+        bTooltip
+        placement="top"
+        appTooltip="簡介"
+      >
+        <img src="./assets/icons/info-line.svg" alt="" />
+      </button>
+    </div>
+
+    <div class="specification-wrapper">
+      <img src="./assets/icons/movie-icon.svg" alt="" />
+      <div class="specification-div">
+        <img src="./assets/icons/14plus.svg" alt="" />
+        <img src="./assets/icons/ad.svg" alt="" />
+        <img src="./assets/icons/cc.svg" alt="" />
+        <span>2010</span>
+      </div>
+    </div>
+    <p class="m-0 card-model-description">
+      迪士尼（Disney）出品，高科技的影片將你帶入數字化的世界。革命性的視覺效果，超乎你的想像力。在勇敢的女戰士柯拉的幫助下，父子在不可思議的網路世界裡展開冒險，發起了正義與邪惡的終極對戰。
+    </p>
+  </div>
+</div>

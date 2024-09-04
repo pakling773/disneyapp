@@ -1,0 +1,44 @@
+<div class="player-wrapper">
+  <div
+    #header
+    class="header d-flex align-items-center position-absolute"
+    [class.show]="showHeader"
+  >
+    <img
+      (click)="back()"
+      class="cursor-pointer"
+      src="assets/icons/arrow_left_ios.svg"
+      alt="Back"
+    />
+    <h6>路卡的夏天</h6>
+  </div>
+  <video
+    id="plyrID"
+    controls
+    crossorigin
+    playsinline
+    poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+  >
+    <source src="assets/videos/luca_trailer.mp4" type="video/mp4" size="576" />
+    <source src="assets/videos/luca_trailer.mp4" type="video/mp4" size="720" />
+    <source src="assets/videos/luca_trailer.mp4" type="video/mp4" size="1080" />
+
+    <!-- Caption files -->
+    <track
+      kind="captions"
+      label="English"
+      srclang="en"
+      src="assets/videos/luca_trailer.mp4"
+      default
+    />
+    <track
+      kind="captions"
+      label="Français"
+      srclang="fr"
+      src="assets/videos/luca_trailer.mp4"
+    />
+
+    <!-- Fallback for browsers that don't support the <video> element -->
+    <a href="assets/videos/luca_trailer.mp4" download>Download</a>
+  </video>
+</div>

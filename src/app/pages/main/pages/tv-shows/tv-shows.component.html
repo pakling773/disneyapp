@@ -1,0 +1,39 @@
+<main class="tvshows-main-wrapper">
+  <app-main-slider [movieHeroCaurosel]="tvshowsHeroCaurosel"></app-main-slider>
+  <div class="categories-section">
+    <app-categories></app-categories>
+  </div>
+
+  <app-common-movies-slider
+    title="今期流行"
+    [movies]="seasonTrends"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-disney-originals
+    title="Disney+ 精選原創"
+    [movies]="disneyOriginals"
+  ></app-disney-originals>
+
+  <app-common-movies-slider
+    title="今期流行"
+    [movies]="adventures"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+  <app-common-movies-slider
+    title="卡通"
+    [movies]="cards"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+  <app-common-movies-slider
+    title="系列紀錄片"
+    [movies]="seriesDocumentarys"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-common-movies-slider
+    title="童心天地"
+    [movies]="childishHeavens"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+</main>

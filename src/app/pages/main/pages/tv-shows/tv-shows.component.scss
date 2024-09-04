@@ -1,0 +1,44 @@
+
+.tvshows-main-wrapper {
+     padding-bottom: 68px;
+}
+
+
+.trending-video-carousel{
+    overflow: hidden;
+}
+
+.series-heading{
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  font-family: 'Lato';
+    color: var(--accent-color);
+    z-index: 1 !important;
+    position: absolute !important;
+    overflow: visible;
+    top: 94px;
+    z-index: 2 !important;
+   
+}
+
+
+@media screen and (max-width: 767px) {
+    .categories-wrapper{
+        margin-top: -70px;
+     
+        
+        button{
+          
+             padding: 0px 12px;
+            gap: 8px ;
+            height: 40px;
+        }
+
+    }
+    
+}
+
+
+
+

@@ -1,0 +1,94 @@
+.test-title {
+  position: absolute;
+  top: 120px;
+}
+
+.hero-swiper-container {
+  --swiper-pagination-bottom: 21%;
+  --swiper-theme-color: #02e7f5;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-inactive-opacity: 0.3;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+}
+
+.hero-swiper {
+  .hero-swiper-btns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 48px;
+    z-index: 111;
+    pointer-events: none;
+  }
+
+  .hero-swiper-btn-prev,
+  .hero-swiper-btn-next {
+    position: absolute;
+    width: 48px !important;
+    height: 48px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    z-index: 99;
+    pointer-events: visible;
+    border: none;
+    color: var(--accent-color) !important;
+    background: transparent;
+
+    &:hover {
+      background: white;
+      transition: background 200ms ease-in;
+    }
+    &::after {
+      height: 24px;
+      filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg)
+        brightness(100%) contrast(100%);
+    }
+    &.swiper-button-disabled {
+      opacity: 0.5;
+    }
+
+    &:hover::after {
+      filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%)
+        contrast(100%);
+    }
+  }
+
+  .hero-swiper-btn-prev {
+    left: -18px !important;
+    transform: translateX(-48px);
+
+    &::after {
+      content: url("/assets/icons/arrow_left.svg") !important;
+    }
+  }
+
+  .hero-swiper-btn-next {
+    right: -18px !important;
+    transform: translateX(48px);
+
+    &::after {
+      content: url("/assets/icons/arrow_right.svg") !important;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .hero-swiper-btns {
+    max-width: unset !important;
+    transform: translateY(15px) !important;
+    top: unset !important;
+    left: 0px !important;
+    bottom: 21%;
+    display: inline-flex !important;
+    width: unset;
+  }
+  .hero-swiper-btn-prev,
+  .hero-swiper-btn-next {
+    position: unset !important;
+    transform: unset !important;
+  }
+}

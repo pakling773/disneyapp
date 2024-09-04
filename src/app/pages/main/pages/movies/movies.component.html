@@ -1,0 +1,36 @@
+<main class="movies-wrapper">
+  <app-main-slider [movieHeroCaurosel]="moviesHeroCaurosel"></app-main-slider>
+
+  <div class="categories-section">
+    <app-categories></app-categories>
+  </div>
+
+  <app-common-movies-slider
+    title="今期流行"
+    [movies]="trendingmoives"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-disney-originals
+    title="Disney+ 精選原創"
+    [movies]="disneyorginals"
+  ></app-disney-originals>
+
+  <app-common-movies-slider
+    title="動作/冒險"
+    [movies]="actionAdventures"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-common-movies-slider
+    title="動畫"
+    [movies]="animationVideos"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-common-movies-slider
+    title="紀錄特輯"
+    [movies]="chronicleCollections"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+</main>

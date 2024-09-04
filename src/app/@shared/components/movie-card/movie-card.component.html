@@ -1,0 +1,12 @@
+<div class="movie-card" #movieCard>
+  <img class="w-100 h-100 object-fit-cover" [src]="movie?.img" alt="" />
+
+  <div class="ranking-tag" *ngIf="movie?.chapter">{{ movie?.chapter }}</div>
+  <div
+    *ngIf="continueWatching && movie?.progress"
+    class="progress-wrapper"
+    style="--progress-p: {{ movie?.progress }}"
+  >
+    <div class="progress-div"></div>
+  </div>
+</div>

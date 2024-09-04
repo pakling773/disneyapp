@@ -1,0 +1,210 @@
+.episodes-grid {
+    --bs-gutter-x: 1.25rem !important;
+    --bs-gutter-y: 20px !important;
+  }
+  .main-section-wrapper{
+    padding-bottom: 30px;
+  }
+
+  .episodes-num-wrapper {
+    gap: 19px;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+  .episodes-num-wrapper .episode-season-num-div {
+    gap: 16px;
+  }
+  
+  .episode-card {
+    border-radius: 8px;
+    background-color: var(--opacity-10);
+     max-height: 128px !important;
+    /* height: fit-content; */
+    display: flex;
+    overflow: clip;
+  }
+  
+  .episode-card .cover {
+    width: 221px !important;
+    width: 100%;
+    /* height: 128px; */
+    object-fit: cover;
+    height: 100%;
+  }
+  
+  .episode-info-wrapper {
+    padding: 24px 16px ;
+  }
+  .episode-name {
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23.46px;
+    color: var(--accent-color);
+    margin-bottom: 24px;
+  }
+  
+  .episode-description{
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--netural-200);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 42rem;
+    
+  }
+
+  .season-section {
+    margin-top: -104px;
+    z-index: 50 !important;
+    padding-bottom: 56px;
+  }
+
+  .episode-title{
+    color: var(--netural-100);
+  }
+  
+  .specifications-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+
+
+    img{
+
+     
+      height: 24px;
+      object-fit: cover;
+    }
+
+  }
+
+  .movie-card {
+
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+   
+  }
+  
+  .movie-card {
+    border-radius: var(--primary-border-radius);
+    border: 1px solid var(--border-color);
+    overflow: clip;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+
+
+  .tablist .nav-link.active, .tablist .show>.nav-link {
+    color: var(--netural-100) !important;
+    background-color: transparent !important;
+    border-bottom: 2px solid #F9F9F9 !important;
+}
+
+.tablist .nav-link {
+  font-size: 24px !important;
+  font-family: "Work Sans", sans-serif !important;
+  font-weight: 700 !important;
+  line-height: 28.15px !important;
+  color: var(--netural-100) !important;
+}
+
+.tabs-button {
+  border-radius: 0px !important;
+  padding: 0px;
+  
+}
+
+.tablist {
+  gap: 32px;
+  padding: 8px 0px;
+}
+
+.hero-logo{
+margin-right: 19px;
+}
+
+.progress-wrapper {
+  --progress-p: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 5.26%, #000000 139.85%);
+}
+
+.progress-div {
+  width: 90%;
+  height: 5px;
+  border-radius: 140.34px;
+  background: #ffffff80;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.progress-div::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: calc(var(--progress-p) * 1%);
+  background-color: var(--secondary-color);
+  border-radius: 140.34px;
+  height: 5px;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .description{
+    -webkit-line-clamp: 2;
+  }
+
+  .season-section{
+    margin-top: -100px;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  .hero-logo {
+     max-width: 216px;
+  }
+
+  .hero-text-logo{
+
+      max-width: 121px;
+  }
+
+
+  .season-section{
+    margin-top: -70px;
+  }
+
+  .description{
+    -webkit-line-clamp: 1;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .season-section{
+    margin-top: 0px;
+  }
+
+}

@@ -1,0 +1,53 @@
+.common-swiper-container-wrapper {
+  swiper-container {
+    --swiper-pagination-width: 8;
+    --swiper-pagination-height: 8;
+    --swiper-pagination-color: var(--secondary-color);
+    --swiper-pagination-bullet-inactive-color: #c4c4c44d;
+    z-index: 1;
+
+    &:hover {
+      z-index: 3 !important;
+    }
+    &::part(pagination) {
+      top: calc(calc(16 + var(--swiper-pagination-height)) * -1px);
+      right: 0px;
+      left: unset;
+      bottom: unset;
+      width: unset;
+      display: inline-flex;
+    }
+  }
+}
+
+
+
+.movie-caurosel-section {
+  background-color: var(--dark-color);
+}
+
+
+.outer-carousel-container {
+  margin-top: 56px;
+}
+
+.common-swiper-container-wrapper swiper-container::part(container) {
+  overflow: visible !important;
+}
+.common-swiper-container-wrapper swiper-container::part(wrapper) {
+  cursor: grab;
+}
+.swiper-wrapper:-moz-drag-over {
+  cursor: grabbing !important;
+}
+.common-swiper-container-wrapper swiper-container swiper-slide {
+  transition: opacity 0.3s ease;
+  transition-timing-function: ease-in-out;
+}
+
+.common-swiper-container-wrapper swiper-container swiper-slide.active-slide {
+  opacity: 1;
+}
+.common-swiper-container-wrapper swiper-container swiper-slide.inactive-slide {
+  opacity: 0.3;
+}

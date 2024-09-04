@@ -1,0 +1,203 @@
+<header class="position-relative">
+  <div class="header-overlay">
+    <div class="top-overlay"></div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container position-relative">
+        <!-- site logo -->
+        <img
+          class="site-logo cursor-pointer"
+          src="./assets/icons/site-logo.svg"
+          alt=""
+          routerLink="/home"
+        />
+        <div
+          class="d-flex align-items-center justify-content-center g-20 ms-auto"
+        >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img src="./assets/icons/bars.svg" alt="" />
+          </button>
+
+          <!-- <img
+            #avatar
+            (click)="openProfileDropdown('avatar')"
+            class="user-avatar m-0 d-block d-lg-none"
+            src="./assets/images/user-avatar.png"
+            alt=""
+          /> -->
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav flex-wrap me-auto mb-2 mb-lg-0">
+            <ng-container *ngFor="let item of navItems">
+              <li class="nav-item {{ isActive(item) && 'active' }}">
+                <a
+                  class="active d-flex justify-content-center align-items-center"
+                  aria-current="page"
+                  [routerLink]="[item.url]"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path attr.d="{{ item.icon }}" fill="#ffffff" />
+                  </svg>
+                  <span>{{ item.title }}</span>
+                </a>
+              </li>
+            </ng-container>
+            <li class="nav-item d-flex d-lg-none">
+              <div
+                class="search-input-wrapper h-100"
+                [class.focus]="focusInput"
+                (document:click)="onDocumentClick($event)"
+              >
+                <div
+                  class="input-div align-items-center"
+                  (click)="$event.stopPropagation()"
+                >
+                  <img
+                    class="search-icon"
+                    src="./assets/icons/serach.svg"
+                    alt=""
+                    (click)="focusOnInput()"
+                  />
+
+                  <ng-container *ngIf="focusInput; else inputNotFocus">
+                    <input
+                      type="search"
+                      id="search-input"
+                      #searchInput
+                      class="search-input"
+                      placeholder="搜尋"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                      (focus)="focusInput = true"
+                      (blur)="focusInput = false"
+                      (keyup.enter)="goToSearchResult()"
+                    />
+                  </ng-container>
+
+                  <ng-template #inputNotFocus>
+                    <span class="search-link" (click)="focusOnInput()"
+                      >搜尋</span
+                    >
+                  </ng-template>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="header-right-container d-flex">
+            <div class="d-lg-block d-none position-relative">
+              <div
+                class="search-input-wrapper h-100"
+                [class.focus]="focusInput"
+              >
+                <div
+                  class="input-div align-items-center"
+                  (click)="$event.stopPropagation()"
+                >
+                  <img
+                    class="search-icon"
+                    src="./assets/icons/serach.svg"
+                    alt=""
+                    (click)="focusOnInput()"
+                  />
+
+                  <ng-container *ngIf="focusInput; else inputNotFocus">
+                    <input
+                      type="search"
+                      id="search-input"
+                      #searchInput
+                      class="search-input"
+                      placeholder="搜尋"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                      (focus)="focusInput = true"
+                      (blur)="focusInput = false"
+                      [(ngModel)]="searchValue"
+                      (keyup.enter)="goToSearchResult()"
+                    />
+                  </ng-container>
+
+                  <ng-template #inputNotFocus>
+                    <span (click)="focusOnInput()">搜尋</span>
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img src="./assets/icons/plus.svg" alt="" />
+              <h6 class="m-0 body fw-500" (click)="goToSearchResult()">
+                我的片單
+              </h6>
+            </div>
+            <!-- <img
+              #avatarLg
+              (click)="openProfileDropdown('avatarLg')"
+              class="user-avatar d-none d-lg-block"
+              src="./assets/images/user-avatar.png"
+              alt=""
+            /> -->
+          </div>
+        </div>
+
+        <!-- user menu wrapper  end-->
+
+        <img
+          #avatarLg
+          (click)="openProfileDropdown('avatarLg')"
+          class="user-avatar"
+          src="./assets/images/user-avatar.png"
+          alt=""
+        />
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Model Design start from here -->
+<div
+  class="modal fade logout-modal"
+  id="staticBackdrop"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <h2 class="model-title">
+        您確定要從這裝置上 <br />
+        登出嗎?
+      </h2>
+
+      <div class="modal-body-content p-0 w-100">
+        <div class="button-wrapper w-100">
+          <button routerLink="/login" class="secondary-btn">登出</button>
+
+          <button routerLink="account-subscription" class="primary-btn">
+            保留
+          </button>
+        </div>
+        <p class="model-descripton m-0">
+          想管理家庭計劃使用者?
+          <span class="fw-500 accent-color">編輯家庭成員</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Model Design end from here -->

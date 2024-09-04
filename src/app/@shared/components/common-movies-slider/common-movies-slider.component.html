@@ -1,0 +1,32 @@
+<section class="movie-caurosel-section container position-relative">
+  <div class="outer-carousel-container position-relative">
+    <h5 class="caurosel-title pb-16 m-0">{{ title }}</h5>
+
+    <div class="common-swiper-container-wrapper position-relative">
+      <swiper-container
+        class=""
+        init="false"
+        appSwiper
+        #swiperContainer
+        [config]="swiperParams"
+        *ngIf="movies.length"
+      >
+        <ng-container *ngFor="let movie of movies; let i = index">
+          <swiper-slide class="swiper-slide">
+            <app-movie-card
+              [movie]="movie"
+              [continueWatching]="continueWatching"
+            ></app-movie-card>
+          </swiper-slide>
+        </ng-container>
+      </swiper-container>
+      <!-- pagination -->
+      <!-- <div
+          class="swiper-pagination movie-swiper-pagination swiper-pagination-bullets"
+        ></div> -->
+      <!-- pagination -->
+    </div>
+  </div>
+
+  <!-- Hidden by default -->
+</section>

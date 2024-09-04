@@ -1,0 +1,32 @@
+<section class="outer-carousel-container container">
+  <!--  Title -->
+  <h5 class="caurosel-title pb-16 m-0">{{ title }}</h5>
+
+  <!-- Continue  Video section Swipers Start form here -->
+  <div class="common-swiper-container-wrapper position-relative">
+    <swiper-container
+      init="false"
+      appSwiper
+      #swiperContainer
+      [config]="swiperParams"
+    >
+      <!-- Swiper Slide -->
+      <ng-container *ngFor="let movie of movies">
+        <swiper-slide>
+          <div class="orginal-selection-card">
+            <!-- Card thumbnail -->
+            <img
+              class="w-100 h-100 object-fit-cover"
+              src="{{ movie.img }}"
+              alt=""
+            />
+            <!-- progress -->
+          </div>
+        </swiper-slide>
+      </ng-container>
+    </swiper-container>
+
+    <!-- pagination -->
+    <div class="swiper-pagination movie-swiper-pagination"></div>
+  </div>
+</section>

@@ -1,0 +1,83 @@
+.user-menu-wrapper {
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  width: 248px !important;
+  width: 100%;
+  border-radius: var(--primary-border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 4px 20px 0px #00000066;
+  background: var(--netural-700);
+  margin-top: 20px;
+
+  &::before {
+    content: url("/assets/icons/triangle-icon.svg");
+    position: absolute;
+    color: white;
+    top: 4px;
+    right: 16px;
+    height: 16px;
+    width: 18px;
+    z-index: 2;
+  }
+
+  .user-detail {
+    .user-thumbnail {
+      width: 48px;
+      height: 48px;
+      border-radius: 100px;
+    }
+
+    span {
+      font-family: "Work Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18.77px;
+      color: var(--netural-800);
+    }
+  }
+
+  .user-menu {
+    .user-detail-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+
+      .user-detail {
+        gap: 8px;
+        display: flex;
+      }
+    }
+  }
+
+  .sign-out-btn {
+    background: transparent;
+    color: var(--accent-color);
+    align-items: start;
+    justify-content: start;
+    padding: 0;
+    display: flex;
+    border: none;
+  }
+
+  .user-info {
+    gap: 24px;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-color);
+    }
+
+    a:active {
+      color: var(--primary-100);
+    }
+
+    a:focus {
+      color: var(--primary-100);
+    }
+  }
+}

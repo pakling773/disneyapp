@@ -1,0 +1,134 @@
+.subscription-card{
+    max-width: 614px !important;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #FFFFFF1F;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+
+input.picker[type="date"] {
+  position: relative;
+}
+
+input.picker[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  color: transparent;
+  background: transparent;
+}
+
+
+
+  .subscription-logo{
+    width: 100%;
+    height: 241px;
+    object-fit: cover;   
+
+  }
+   
+
+
+.subscription-content{
+    padding: 20px 22px 20px 20px;
+}
+
+.subscription-form{
+    border-radius: 8px;
+    border: 1px solid var( --opacity-12);
+    border-bottom: none !important;
+    max-width: 614px !important;
+    width: 100%;
+   margin-bottom: 40px;
+   overflow: hidden;
+}
+
+.form-group{
+    border-bottom: 1px solid var(--opacity-12);
+}
+
+.input-right-item{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 54px;
+    gap: 20px;
+    display: flex;
+      align-items: center;
+ 
+}
+
+.visa-logo{
+   margin-right: 4px;
+}
+
+
+
+.subscription-form {
+  input{
+    height: 68px;
+    background: transparent !important;
+    border: none ;
+    color: var(--netural-200) !important;
+    padding: 6px 20px;
+    line-height: 18.77px !important;
+  }
+
+}
+
+
+.subscription-form input:focus{
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.subscription-form input::placeholder{
+    color: var(--netural-200) !important;
+}
+
+  .dateTime{
+   text-align: right !important;
+
+  }
+  
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    background: transparent !important;
+  }
+
+  .date-lable{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--netural-200) !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+
+  }
+
+  .cancel-btn {
+  height: 56px;
+  margin-top: 5px;
+  text-align: center;
+  padding: 18px 0px;
+  margin-bottom: 5px;
+
+  }
+
+  .cancel-btn a{
+    color: #FC6666;
+    text-align: center;
+  }
+
+
+  .account-subscription-section {
+    padding: 100px 0px 80px 0px;
+}
+

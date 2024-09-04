@@ -1,0 +1,98 @@
+<main class="main-wrapper">
+  <app-main-slider [movieHeroCaurosel]="homeHeroCaurosel"></app-main-slider>
+  <div class="w-100 container">
+    <div class="brand-categories-wrapper">
+      <img
+        routerLink="/category-reserve"
+        class="brand-category cursor-pointer"
+        src="./assets/images/disney-category.png"
+        alt=""
+      />
+      <img
+        routerLink="/category-reserve"
+        class="brand-category cursor-pointer"
+        src="./assets/images/pixar.png"
+        alt=""
+      />
+      <img
+        routerLink="/category-reserve"
+        class="brand-category cursor-pointer"
+        src="./assets/images/marvel.png"
+        alt=""
+      />
+      <img
+        routerLink="/category-reserve"
+        class="brand-category cursor-pointer"
+        src="./assets/images/star-wars.png"
+        alt=""
+      />
+      <img
+        routerLink="/category-reserve"
+        class="brand-category cursor-pointer"
+        src="./assets/images/national.png"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <app-common-movies-slider
+    title="請繼續觀看"
+    [movies]="movies"
+    [continueWatching]="true"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-common-movies-slider
+    title="推薦您，因你喜歡《反斗奇兵》"
+    [movies]="recommendeds"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-common-movies-slider
+    title="本日 Top 10"
+    [movies]="topVideos"
+    [isTopMovies]="true"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-common-movies-slider
+    title="最近上架"
+    [movies]="movies"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-common-movies-slider
+    title="最近上架"
+    [movies]="disneyOrginals"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+  <app-common-movies-slider
+    title="近期流行"
+    [movies]="movies"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-common-movies-slider
+    title="紀錄特輯"
+    [movies]="recommendeds"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-common-movies-slider
+    title="我的片單"
+    [movies]="playlist"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-common-movies-slider
+    title="動畫電影"
+    [movies]="movies"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+
+  <app-common-movies-slider
+    title="推薦您，因你喜歡《洛基》"
+    [movies]="recommendeds"
+    class="first-common-slider"
+  ></app-common-movies-slider>
+</main>

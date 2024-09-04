@@ -1,0 +1,25 @@
+<section class="movie-caurosel-section container">
+  <div class="outer-carousel-container position-relative">
+    <h5 class="paragraph pb-16 m-0">{{ title }}</h5>
+
+    <div class="swiper position-relative">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let movie of movies">
+          <div class="movie-card">
+            <img
+              class="w-100 h-100 object-fit-cover"
+              src="{{ movie.img }}"
+              alt=""
+            />
+            <div class="progress-wrapper" style="--progress-p: 20">
+              <div class="progress-div"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- pagination -->
+      </div>
+      <div class="movie-swiper-pagination"></div>
+    </div>
+  </div>
+</section>

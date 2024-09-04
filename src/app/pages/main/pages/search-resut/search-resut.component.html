@@ -1,0 +1,55 @@
+<main class="search-result-main-wrapper">
+  <section class="movie-result-section">
+    <div class="container">
+      <h3 class="h3-heading m-0 pb-32">
+        <span class="neutral-900">您的搜尋結果：</span>“{{ searchValue }}”
+      </h3>
+
+      <div
+        class="row movie-grid row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-5"
+      >
+        <ng-container *ngIf="searchResults.length; else emptySearchResult">
+          <div class="col" *ngFor="let movie of searchResults">
+            <div class="movie-card">
+              <img [src]="movie?.img" alt="" />
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-template #emptySearchResult>
+          <p class="empty-search-message">找不到相關結果</p>
+        </ng-template>
+      </div>
+    </div>
+  </section>
+
+  <div *ngIf="!searchResults.length" class="container">
+    <img src="assets/images/search-recommendation.png" alt="" srcset="" />
+  </div>
+
+  <section class="exploration-section">
+    <div class="container">
+      <h3 class="h3-heading m-0 pb-32">深入探索</h3>
+
+      <app-categories class="categories"></app-categories>
+
+      <!-- <div class="explore-card-wrapper">
+        <div
+          class="row movie-grid row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-5"
+        >
+          <div class="col" *ngFor="let movie of explorationMovies">
+            <div class="movie-card border-0">
+              <img [src]="movie?.img" alt="" />
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <img
+        class="w-100 search-result-images"
+        src="assets/images/search-result-images.png"
+        alt=""
+      />
+    </div>
+  </section>
+</main>

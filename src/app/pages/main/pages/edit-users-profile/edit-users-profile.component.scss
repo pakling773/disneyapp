@@ -1,0 +1,73 @@
+
+.users-edit-profile-section{
+    padding: 76px 0px 80px 0px;
+}
+
+.users-edit-profile-wrapper{
+ padding: 44px 0px 80px 0px;
+
+}
+.user-account{
+   width: 185px;
+
+}
+
+@media (min-width: 992px) {
+   .custom-col-lg {
+     width: 20% !important;
+   }
+ }
+
+
+
+.user-account .avator{
+
+   max-width: 185px ;
+   height: 185px;
+   object-fit: cover;
+   border-radius: 100%;
+   
+   width: 100%;
+}
+
+.editor-div{
+   padding: 12px;
+   background: var(--accent-color);
+   width: 34px;
+   height: 34px;
+   border-radius: 100px;
+   position: absolute;
+
+   right: 10px;
+   bottom: 20px;
+}
+
+
+.editor-div img{
+   width: 14px;
+   height: 18px;
+}
+
+.user-name{
+
+   padding: 32px 0px 15px 0px;
+}
+
+.profile-lock-icon{
+
+   width: 24px;
+}
+
+.completed-btn{
+  height: 48px;
+   max-width: 614px !important;
+   width: 100%;
+}
+
+.users-edited-profile-grid{
+
+   --bs-gutter-x: 1.5rem;
+   --bs-gutter-y: 2.1rem !important;
+}
+
+

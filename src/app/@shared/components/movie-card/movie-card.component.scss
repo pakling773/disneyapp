@@ -1,0 +1,78 @@
+app-movie-card {
+  position: relative;
+}
+
+.movie-card  {
+
+  img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ 
+}
+
+.movie-card {
+  border-radius: var(--primary-border-radius);
+  border: 1px solid var(--border-color);
+  overflow: clip;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.movie-card .ranking-tag {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 35px;
+  height: 35px;
+  background: #037aebcc;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  color: var(--accent-color);
+}
+
+.progress-wrapper {
+  --progress-p: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 5.26%, #000000 139.85%);
+}
+
+.progress-div {
+  width: 90%;
+  height: 5px;
+  border-radius: 140.34px;
+  background: #ffffff80;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.progress-div::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: calc(var(--progress-p) * 1%);
+  background-color: var(--secondary-color);
+  border-radius: 140.34px;
+  height: 5px;
+}
+
+
